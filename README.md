@@ -7,3 +7,5 @@ Modern Web Page
 * When item is removed, the added button should toggle the shop-item-button back to "Add".
 * Fix the theme on the Theme Toggle About Page
 * Add the loading page to the end of the checkout
+* fix index page header animation
+

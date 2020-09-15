@@ -41,7 +41,7 @@ html, body {
     text-align: center;
     font-size: 1.1em;
     font-weight: lighter;
-    border-bottom: 1px solid rgba(255, 255, 255, .3)
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .main-nav li {
@@ -58,6 +58,8 @@ html, body {
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
+    position: sticky;
+    top:0;
 }
 
 .band-name {
@@ -80,8 +82,8 @@ html, body {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1.5em;
 }
+
 .section-header {
     font-family: "Metal Mania";
     font-weight: normal;
@@ -131,7 +133,8 @@ html, body {
 }
 
 .btn-header {
-    margin: .5em 15% 2em 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     color: white;
     border: 2px solid #2D9CDB;
     background-color: rgba(255, 255, 255, .1);
@@ -168,6 +171,50 @@ html, body {
 
 .btn-primary:hover {
     background-color: #2D9CDB;
+}
+
+.posi{
+    display:flex;
+    justify-content: center;
+    margin-left:30%;
+}
+.reveal-text {
+    font-size: 1em;
+    font-weight: 900;
+    color: white;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .reveal-text {
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: url("reveal_background.jpg");
+        background-repeat: repeat-x;
+        animation: reveal-background 3s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes reveal-background {
+    0% {
+        background-size: 0px;
+        background-position-y: 0%;
+    }
+    10% {
+        background-size: 5px;
+        background-position-y: 0%;
+    }
+    35%, 45% {
+        background-position-y: 100%;
+    }
+    70% {
+        background-size: 10px;
+        background-position-y: 0%;
+    }
+    100% {
+        background-size: 200px;
+    }
 }
 
 .tour-row {
@@ -342,11 +389,6 @@ html, body {
 
 
 
-
-
-
-
-
 .btn-checkout{
     position: relative;
     height:35px;
@@ -368,6 +410,8 @@ html, body {
     display:flex;
     justify-content: center;
     align-items: center ;
+    cursor: pointer;
+    border-radius: .15em;
 }
 
 .default-side{
