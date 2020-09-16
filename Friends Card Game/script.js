@@ -1,3 +1,5 @@
+// TODO: Change everything to your own code to practice
+
 class AudioController {
          constructor() {
          this.bgMusic = new Audio('Assets/Audio/creepy.mp3');

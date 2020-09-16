@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<title>JSON</title>
+<style>
+    .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+    }
+    
+    .flex-container div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='flex-container'>
+            <div class="console" >
+                <p>JSON.parse("var containing json") -> The json file displays as object, the object is in " `` ". Returns to us an object and not a string.</p>
+            </div>
+        </div>
+    </div>
+<script text="text/javascript">
+const friends = `[
+    {
+        "id":"4563761023",
+        "name":"Kevin",
+        "lastname": "van Deventer",
+        "age": 24
+    },
+    {
+        "id":"4563761024",
+        "name":"Claudia",
+        "lastname": "Martin",
+        "age": 25
+    },
+    {
+        "id":"4563761025",
+        "name":"Josh",
+        "lastname": "Pretorius",
+        "age": 24
+    }
+]`
+
+let response = document.querySelector('.console');
+let addResponse = document.createElement("p");
+let msgContent1 = friends;
+let msgContent2 = JSON.parse(friends);
+let msg1 = document.createTextNode(msgContent1);
+let js = document.createTextNode("Next is the json.parsed method");
+let msg2 = document.createTextNode(msgContent2);
+addResponse.appendChild(msg1);
+addResponse.appendChild(js)
+addResponse.appendChild(msg2);
+response.appendChild(addResponse);
+response.appendChild(addResponse);
+response.appendChild(addResponse);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
