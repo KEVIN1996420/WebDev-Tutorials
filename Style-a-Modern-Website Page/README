@@ -1,0 +1,9 @@
+Express
+ejs
+stripe
+.env
+
+stripe - secret api key is secret.
+mongodb
+heroku
+
